@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header id="header">
+        <nav id="header__menu">
+            <a href="https://www.aluracursos.com/" class="header__menu__link">
+                <img src="./assets/Logo.png" alt="Logo de Alura" id="header__menu__link__imagen">
+            </a>
+        </nav>
+    </header>
+    <main id="principal" >
+        <section id="encriptador" >
+            <textarea id="encriptador__texto" placeholder="Ingrese el texto aquí"></textarea>
+            <div id="encriptador__detalles" >
+                <img id="encriptador__detalles__icono" src="assets/signo-alerta.png">
+                <p id="encriptador__detalles__texto">
+                    Solo letras minúsculas y sin acentos
+                </p>
+            </div>
+            <div id="encriptador__botones">
+                <button class="botones" id="encriptador__actuar">
+                    Encriptar
+                </button>
+                <button class="botones" id="encriptador__revertir">
+                    Desencriptar
+                </button>
+            </div>
+        </section>
+        <section id="resultado">
+                <img src="./assets/imagen-resultado.png" alt="imagen de persona buscando" id="resultado__imagen">
+                <p id="resultado___vacio">Ningún mensaje fue encontrado</p>
+                <p id="resultado__texto">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button id="resultado__copiar">
+                    Copiar
+                </button>
+        </section>
+    </main>
+    <footer id="footer">
+
+    </footer>
+    <script src="encriptador.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-primario: #0A3871;
+    --color-secundario: #E5E5E5;
+    --color-terciario: #D8DFE8;
+    --color-texto: #343A40;
+
+    --fuente-inter: "Inter", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    
+}
+
+#header{
+    padding: 40px 0px 40px 40px;
+}
+
+#header__menu__link__imagen{
+    height: 2rem;
+}
+
+#principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+#encriptador{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 680px;
+    height: 80vh;
+}
+
+#encriptador__texto{
+    font-size: 32px;
+    font-family: var(--fuente-inter);
+    width: 100%;
+    border: none;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    height: 80%;
+    text-align: justify;
+}
+
+#encriptador__texto::placeholder {
+    color: var(--color-primario);
+}
+
+#encriptador__texto:focus {
+    text-transform: lowercase;
+    outline: none;
+}
+
+#encriptador__detalles{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#encriptador__detalles__texto{
+    font-size: 12px;
+    font-family: var(--fuente-inter);
+}
+
+#encriptador__botones{
+    display: flex;
+    gap: 24px;
+}
+
+.botones{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-family: var(--fuente-inter);
+    padding: 24px;
+}
+
+#encriptador__actuar{
+    background-color: var(--color-primario);
+    color: #FFFFFF;
+    border: none;
+}
+
+#encriptador__revertir{
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+    border: solid 1px var(--color-primario);
+}
+
+#resultado{
+    width: 400px;
+    height: 944px;
+    border-radius: 32px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#resultado__imagen{
+    margin: 32px;
+}
+
+#resultado___vacio{
+    font-size: 24px;
+    font-family: var(--fuente-inter);
+    color: var(--color-texto);
+    height: 58px;
+    text-align: center;
+    margin: 32px;
+}
+
+#resultado__texto{
+    font-size: 16px;
+    font-family: var(--fuente-inter);
+    color: #495057;
+    height: 48px;
+    text-align: center;
+    border: none;
+    padding: 32px;
+}
