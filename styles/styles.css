@@ -118,7 +118,7 @@ body{
     margin: 32px;
 }
 
-#resultado___vacio{
+#resultado__vacio{
     font-size: 24px;
     font-family: var(--fuente-inter);
     color: var(--color-texto);
