@@ -5,6 +5,7 @@
     --color-secundario: #E5E5E5;
     --color-terciario: #D8DFE8;
     --color-texto: #343A40;
+    --color-resultado: #495057;
 
     --fuente-inter: "Inter", sans-serif;
 }
@@ -53,7 +54,8 @@ body{
     background-color: var(--color-secundario);
     color: var(--color-primario);
     height: 80%;
-    text-align: justify;
+    text-align: left;
+    text-transform: lowercase;
 }
 
 #encriptador__texto::placeholder {
@@ -96,7 +98,7 @@ body{
     border: none;
 }
 
-#encriptador__revertir{
+#encriptador__revertir, #resultado__copiar{
     background-color: var(--color-terciario);
     color: var(--color-primario);
     border: solid 1px var(--color-primario);
@@ -112,6 +114,7 @@ body{
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    gap: 32px;
 }
 
 #resultado__imagen{
@@ -130,9 +133,25 @@ body{
 #resultado__texto{
     font-size: 16px;
     font-family: var(--fuente-inter);
-    color: #495057;
+    color: var(--color-resultado);
     height: 48px;
     text-align: center;
     border: none;
     padding: 32px;
+}
+
+#resultado__obtenido{
+    font-size: 24px;
+    font-family: var(--fuente-inter);
+    color: var(--color-resultado);
+    padding: 32px;
+    text-align: left;
+    border: none;
+    height: 80%;
+    text-transform: lowercase;
+}
+
+#resultado__obtenido:focus{
+    outline: none;
+    text-transform: lowercase;
 }

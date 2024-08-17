@@ -6,19 +6,15 @@ function capturarTexto(){
 }
 
 function estaVacio(cadenaDeCaracteres){
-    return cadenaDeCaracteres.trim().length === 0;
+    aux = cadenaDeCaracteres;
+    return aux.trim().length === 0;
 }
 
 function validarTextoInicial(){
     capturarTexto();
     if(estaVacio(textoInicial)){
-        alert("Ingrese el texto que desea encriptar.");
-        //mostrarObjetos();
-    } else {
-        //ocultarObjetos();
-        //mostrarResultado(textoFinal);
-        
-    }
+        alert("Ingrese el texto que desea encriptar o desencriptar.");
+    } 
     
 }
 
@@ -90,19 +86,20 @@ function reestablecerValoresIniciales(){
 }
 
 function copiarTexto() {
-    let textoParaCopiar = document.getElementById('resultado__obtenido').innerText;
-    let textArea = document.createElement("textarea");
-    textArea.value = textoParaCopiar;
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-    try {
-        document.execCommand('copy');
-    } catch (err) {
-        alert('No se pudo copiar el texto');
+    const textArea = document.getElementById('resultado__obtenido');
+    if (textArea) {
+        textArea.select(); // Selecciona el texto dentro del textarea
+        try {
+            document.execCommand('copy'); // Copia el texto seleccionado al portapapeles
+            alert('Texto copiado al portapapeles.');
+        } catch (err) {
+            alert('No se pudo copiar el texto.');
+        }
+    } else {
+        console.error('No se encontró el textarea.');
     }
-    document.body.removeChild(textArea);
 }
+
 
 function mostrarObjetos(){
     mostrarObjeto("resultado__imagen");
